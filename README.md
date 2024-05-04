@@ -2,7 +2,9 @@
 
 A simple Flet app for controlling Vector robots.
 
-![app_demo_1](docs/app_demo_01.png) ![app_demo_2](docs/app_demo_02.png) ![app_demo_3](docs/app_demo_03.png) ![app_demo_4](docs/app_demo_04.png)
+<!-- ![app_demo_1](docs/app_demo_01.png) ![app_demo_2](docs/app_demo_02.png) ![app_demo_3](docs/app_demo_03.png)  -->
+
+![app_demo_4](docs/app_demo_04.png)
 
 ## Overview
 
