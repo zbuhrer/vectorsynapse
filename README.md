@@ -20,7 +20,7 @@ We plan to enhance this app with the following features:
 
 * [ ] Configuration Editor: allow users to input their serial number and other settings without having to edit the code
 * [ ] Support for multiple robots
-* [ ] Remote control 
+* [ ] Remote control
 * [ ] Camera feed
 * [ ] Sensor feeds
 * [ ] Status Indicators
@@ -28,11 +28,10 @@ We plan to enhance this app with the following features:
 
 ## Requirements
 
-This app relies on the following:
+* Wirepod setup: https://github.com/kercre123/wire-pod
+* a Vector robot that is compatible and setup on Wirepod
 
-* Wirepod setup (✓)
-
-Note: This is a placeholder section, please fill in your own roadmap/plans and requirements as needed.
+My bot's serial number is hardcoded in `./src/vector_talk.py` — update this variable with your Vector's esn value.
 
 ### Credits
 
