@@ -1,7 +1,5 @@
 # VectorSynapse Flet App
 
-=====================
-
 A simple Flet app for controlling Vector robots.
 
 ## Overview
