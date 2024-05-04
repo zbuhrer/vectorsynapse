@@ -1,5 +1,7 @@
 import flet as ft
 from src import vector_talk
+from src.ui.indicator import Indicator as VectorIndicators
+import asyncio
 
 class VectorSynapse(ft.Column):
     def __init__(self):
@@ -18,15 +20,30 @@ class VectorSynapse(ft.Column):
 
     async def send(self, text):
         text = str(self.text_field.value)
-        await vector_talk.talk(text)
-        self.messages_widget.controls.append(ft.Text(text))
+        self.text_field.disabled = True
+        self.submit_button.disabled = True
+        self.text_field.label = "Speaking..."
+        self.update()
+
+        try: 
+            await vector_talk.talk(text)
+            self.messages_widget.controls.append(ft.Text(text))
+            self.update()
+        except asyncio.TimeoutError as e:
+            print(f"Timeout error: {e}")
+            self.messages_list.append(e)
+            self.update()
+            pass
+
+        self.text_field.disabled = False
+        self.submit_button.disabled = False
         self.text_field.value = ""
         self.update()
 
 def main(page: ft.Page):
     page.title = "Vector Synapse"
     page.add(
-        VectorSynapse(),
+        ft.Row([VectorSynapse(), VectorIndicators()])
         )
 
 if __name__ == "__main__":
