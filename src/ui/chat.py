@@ -2,6 +2,7 @@ import flet as ft
 from src import vector_talk
 import asyncio 
 
+from flet import margin
 
 class Chat(ft.Column):
     def __init__(self):
@@ -15,8 +16,8 @@ class Chat(ft.Column):
         self.controls = [
             self.text_field,
             self.submit_button,
-            self.messages_widget,
-        ]
+            self.messages_widget
+            ]
 
     async def send(self, text):
         text = str(self.text_field.value)
