@@ -2,8 +2,6 @@ import flet as ft
 from src import vector_talk
 import asyncio 
 
-from flet import margin
-
 class Chat(ft.Column):
     def __init__(self):
         super().__init__()
